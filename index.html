@@ -22,7 +22,53 @@
 </head>
 
 <body>
-    <iframe id="" title="test" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://gamelot.online" frameborder="0" style="width: 1px; min-width: 100%; height: 800px; border:none;" scrolling="auto"> </iframe>
+    <!-- <iframe id="iframe" title="test" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://gamelot.online" frameborder="0" style="width: 1px; min-width: 100%; height: 800px; border:none;" scrolling="auto"> </iframe> -->
+
+
+
+
+
+    <iframe id="iframe" src="iframe.html" width="100%" height="97%" name="iframe" scrolling="auto" frameborder=0></iframe>
+
+<script language="JavaScript" type="text/javascript">
+
+<!--
+
+(function(el, u){
+
+//проверяем есть ли наш фрейм на странице
+
+if(el != undefined){
+
+//удсли есть проверяем есть ли для него адрес
+
+if(u != "" && u.substring(1) != ""){//если адрес есть
+
+//чтоб не вышло рекурсии добавляем флаг
+
+el.src = u.substring(1) + "#embedded";
+
+}
+
+}else{
+
+//проверяем во фрейме ли загружена страница
+
+if(u != "#embedded")
+
+//подставляем хеш и редиректим
+
+window.location.href =
+
+"read.html#" + window.location.href;
+
+}
+
+})(document.getElementById("iframe"), window.location.hash);
+
+//-->
+
+</script>
 </body>
 
 </html>
